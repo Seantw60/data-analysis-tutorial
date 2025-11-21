@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+, "src/app/page.jsx", "src/app/layout.jsx", "src/components/AIInsights.jsx", "src/components/DataPreview.jsx", "src/components/DataVisualizations.jsx", "src/components/FileUpload.jsx", "src/components/QualityScore.jsx", "src/lib/aiIntegration.js", "src/lib/dataAnalysis.js", "src/lib/fileProcessing.js", "src/lib/qualityMetrics.js", "src/types/DataTypes.js"  ],
+  "exclude": ["node_modules"]
+}
