@@ -1,4 +1,4 @@
-import React from "react";
+import AIInsights from "@/src/components/AIInsights";
 
 export default function ResultsPage() {
   return (
@@ -54,24 +54,23 @@ export default function ResultsPage() {
         </div>
       </div>
 
-      {/* AI Insights */}
-      <div className="mt-8 p-4 bg-yellow-50 border rounded-md">
-        <h3 className="font-semibold text-lg mb-4">AI-Powered Insights:</h3>
-
-        <div className="space-y-4 text-sm">
-          <div>
-            <p className="font-semibold">1. Address Missing Values (High Priority)</p>
-            <p>• 2 missing in “Name”</p>
-            <p>• 5 missing in “Age”</p>
-          </div>
-
-          <div>
-            <p className="font-semibold">2. Standardize Email Format (Medium Priority)</p>
-            <p>• Some emails use uppercase, others lowercase</p>
-            <p>• Suggested SQL: <code>UPDATE table SET email = LOWER(email);</code></p>
-          </div>
-        </div>
-      </div>
+      {/* AI Insights Component */}
+      <AIInsights
+        loading={false}
+        insights={[
+          {
+            title: "1. Address Missing Values (High Priority)",
+            items: ["2 missing in “Name”", "5 missing in “Age”"],
+          },
+          {
+            title: "2. Standardize Email Format (Medium Priority)",
+            items: [
+              "Some emails use uppercase, others lowercase",
+              "Suggested SQL: UPDATE table SET email = LOWER(email);",
+            ],
+          },
+        ]}
+      />
 
     </main>
   );
